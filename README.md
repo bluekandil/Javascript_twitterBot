@@ -21,5 +21,3 @@ Open the Node.js command prompt,navigate to the working directory and install tw
 
 npm install twit --save
 
-
-
