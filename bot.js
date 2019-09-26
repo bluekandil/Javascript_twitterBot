@@ -19,7 +19,7 @@ let joke;
 let request = require('request');
 
 
-// Joke API json call
+// Random Joke API json call
 request(url, function (error, response, body) {
   if (!error && response.statusCode == 200) {
      importedJSON = JSON.parse(body);
