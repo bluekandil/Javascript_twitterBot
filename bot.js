@@ -20,19 +20,25 @@ let request = require('request');
 
 
 // Random Joke API json call
-request(url, function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-     importedJSON = JSON.parse(body);
-     joke = importedJSON.value.joke;
-     //console.log(importedJSON.value.joke);
-  }
-});
+function getNewJoke(){
+  request(url, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      importedJSON = JSON.parse(body);
+      joke = importedJSON.value.joke;
+      console.log(joke);
+     
+    }
+  });
+}
 
 //wrap a message and post
 function sendTweet(){
+  getNewJoke();
+  
   let myMsg={
     status:joke
   }
+  
   T.post('statuses/update', myMsg ,gotresult); 
   
   function gotresult(err, data, response) {
