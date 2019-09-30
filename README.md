@@ -1,9 +1,9 @@
 # Javascript_twitterBot
 
 Prerequisite 
-Nodejs
-NPM
-Twitter developer account(Keys and Tokens)
+#Nodejs
+#NPM
+#Twitter developer account(Keys and Tokens)
 
 
 Setting up the enviroment
